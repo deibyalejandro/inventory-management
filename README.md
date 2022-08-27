@@ -21,6 +21,7 @@ Actualiza las siguientes propiedades
 
 #### Ejecutalo
 Usar intellij IDEA para abrir el proyecto, tutorial con los pasos necesarios: https://medium.com/backend-habit/intellij-idea-running-multiple-project-microservices-in-one-workspace-d61126fe0eef
+
 Ejecutar cada uno de los proyectos maven, orden: 1- SpringBootServicioConfigServerApplication 2- SpringBootServicioEurekaServerApplication 3- SpringBootServicioZuulServerApplication 4- SpringBootServicioOauthServerApplication 5- SpringBootServicioUsuariosServerApplication 6- SpringBootServicioProductosServerApplication
 
 Enviar el request en el archivo postman adjunto para generar el token de autenticación
