@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "b397a14a-2381-4387-86f5-a510d6ab3ce7",
+		"name": "ms Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10787589"
+	},
+	"item": [
+		{
+			"name": "localhost:8090/api/productos/ver/7?color=verde",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "12345678910",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8090/api/productos/ver/7?color=verde",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"productos",
+						"ver",
+						"7"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": "verde"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/usuarios/usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"mesa s9\",\r\n    \"precio\": 1500,\r\n    \"createAt\": \"2019-05-06\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/api/usuarios/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"usuarios",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/security/oauth/token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "frontendapp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "andres",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8090/api/security/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"security",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/productos/eliminar/10",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhbmRyZXMiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJHdXptYW4iLCJjb3JyZW8iOiJwcm9mZXNvckBib2xzYWRlaWRlYXMuY29tIiwiZXhwIjoxNjQyMDE4ODg1LCJub21icmUiOiJBbmRyZXMiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiZDViNDYzMzQtODFhYy00ODg5LThkNzctNzcwODIyMjhmYTAzIiwiY2xpZW50X2lkIjoiZnJvbnRlbmRhcHAifQ.gCLZuqD5VAI1Ii_4AFIgnItfjuQfT1Cv9Pk_0W2ii-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/productos/eliminar/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"productos",
+						"eliminar",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/productos/crear",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhbmRyZXMiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJHdXptYW4iLCJjb3JyZW8iOiJwcm9mZXNvckBib2xzYWRlaWRlYXMuY29tIiwiZXhwIjoxNjQyMDA5MTI2LCJub21icmUiOiJBbmRyZXMiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiZDNiOTE5MGEtMzkwZS00ZDJiLWI5ZjAtNTgzOWI2ZmMyMGE1IiwiY2xpZW50X2lkIjoiZnJvbnRlbmRhcHAifQ.-r3BnrHZLi-hIMk6RMEMIfzo3ohAm0nAy_AiQxuPGqI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10,\r\n    \"nombre\": \"Nike\",\r\n    \"precio\": 100.0,\r\n    \"createAt\": \"2022-01-06\",\r\n    \"port\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/api/productos/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"productos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/items/listar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhbmRyZXMiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJHdXptYW4iLCJjb3JyZW8iOiJwcm9mZXNvckBib2xzYWRlaWRlYXMuY29tIiwiZXhwIjoxNjQyMDE4ODg1LCJub21icmUiOiJBbmRyZXMiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiZDViNDYzMzQtODFhYy00ODg5LThkNzctNzcwODIyMjhmYTAzIiwiY2xpZW50X2lkIjoiZnJvbnRlbmRhcHAifQ.gCLZuqD5VAI1Ii_4AFIgnItfjuQfT1Cv9Pk_0W2ii-I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/items/listar",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"items",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
